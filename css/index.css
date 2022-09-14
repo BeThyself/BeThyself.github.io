@@ -178,6 +178,14 @@ template {
 [hidden] {
   display: none
 }
+/*移动端优化：去除归档、标签、最新文章、公告、、只保留网站统计*/
+@media screen and (max-width: 800px) {
+  #aside_content
+  div:not(:last-child) {
+      display: none;
+      font-size: 13px;
+  }
+}
 .limit-one-line,
 #article-container .flink .flink-item-name,
 #article-container .flink .flink-item-desc,
@@ -3240,7 +3248,7 @@ h1.page-title + .tag-cloud-list {
   content: '';
 }
 #page-header.full_page {
-  height: 600px;
+  height: 100vh;
   background-attachment: fixed;
 }
 #page-header.full_page #site-info {
